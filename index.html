@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>熊旭 · 数据作品集</title>
+<style>
+  :root{--ink:#1a1a1a;--sub:#555;--line:#e2e2e2;--accent:#1f4e79;--soft:#f4f6f9;--muted:#888;}
+  *{box-sizing:border-box;}
+  body{font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+       color:var(--ink);margin:0;background:#eef1f5;line-height:1.6;}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 20px 64px;}
+  header{background:#fff;border-radius:10px;padding:28px 30px;box-shadow:0 4px 16px rgba(0,0,0,.06);}
+  .name{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:1px;margin:0;}
+  .tag{color:var(--sub);margin:6px 0 0;font-size:14px;}
+  .links{margin-top:14px;font-size:13px;color:var(--muted);}
+  .links a{color:var(--accent);text-decoration:none;margin-right:14px;}
+  .links a:hover{text-decoration:underline;}
+  h2.sec{font-size:16px;color:var(--accent);border-left:4px solid var(--accent);
+         padding-left:8px;margin:34px 0 14px;letter-spacing:1px;}
+  .card{background:#fff;border-radius:10px;padding:22px 24px;box-shadow:0 4px 16px rgba(0,0,0,.06);margin-bottom:18px;}
+  .card h3{margin:0 0 4px;font-size:17px;}
+  .card .meta{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+  .card p{margin:6px 0;color:var(--sub);font-size:14px;}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:11px;
+         padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;}
+  .conclusion{background:var(--soft);border-left:3px solid var(--accent);
+              padding:10px 14px;border-radius:0 6px 6px 0;font-size:13.5px;}
+  .conclusion b{color:var(--accent);}
+  img.chart{width:100%;max-width:640px;display:block;margin:14px 0;border:1px solid var(--line);border-radius:6px;}
+  .note{font-size:12px;color:var(--muted);margin-top:8px;}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:14px;
+        padding:4px 12px;font-size:12px;color:var(--sub);margin:3px 6px 3px 0;}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="name">熊 旭</p>
+    <p class="tag">数据分析 / 数据运营实习生 · 数据作品集</p>
+    <p class="links">
+      <a href="projects/01_ecommerce_sales/README.md">项目 01 说明</a>
+      <a href="projects/01_ecommerce_sales/output/findings.md">分析结论</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub 仓库（待绑定）</a>
+      <a href="https://whu.edu.cn" target="_blank" rel="noopener">简历（待绑定链接）</a>
+    </p>
+  </header>
+
+  <h2 class="sec">作品集项目</h2>
+
+  <div class="card">
+    <h3>01 · 电商销售数据分析 <span class="badge">可运行</span></h3>
+    <div class="meta">Python(pandas) + R(tidyverse) 双轨 ｜ 605→533 行清洗 ｜ SQLite 落库</div>
+    <p><b>业务问题：</b>从电商订单中识别销售趋势、品类与区域表现，定位可优化的运营方向。</p>
+    <div class="conclusion">
+      <b>一句话结论：</b>2025-01 销售额最高（¥111,729），「数码」品类贡献最大，是后续重点运营方向。<br>
+      <b>建议：</b>峰值月前 2 周对「数码」加大投放与备货；对低贡献区域做定向召回活动。
+      <div class="note">※ 当前为示例脏数据，结论偏模板；替换真实 Kaggle 数据后需改写此处。</div>
+    </div>
+    <img class="chart" src="projects/01_ecommerce_sales/output/sales_trend.png" alt="月度销售额趋势">
+    <p class="note">交付物：原始脏数据 → 清洗后数据 → 分析脚本(Python/R) → 图表 + 结论 → SQLite 数据库(orders_clean, 533 行)</p>
+  </div>
+
+  <h2 class="sec">技术栈</h2>
+  <div class="card">
+    <span class="pill">Python · pandas</span>
+    <span class="pill">R · tidyverse</span>
+    <span class="pill">Excel · 透视表</span>
+    <span class="pill">帆软 FineBI</span>
+    <span class="pill">SQL / SQLite</span>
+    <span class="pill">Matplotlib</span>
+    <span class="pill">数据清洗</span>
+    <span class="pill">可视化</span>
+    <span class="pill">业务复盘</span>
+  </div>
+
+  <h2 class="sec">下一步</h2>
+  <div class="card">
+    <p>① 把示例数据换成真实 Kaggle 电商数据集，重跑脚本并改写结论。</p>
+    <p>② 新增项目 02（楚超科研 / 武汉公开数据 / 家乡旅游，待定）。</p>
+    <p>③ 推送 GitHub，绑定简历「作品集」占位链接，开启 GitHub Pages 展示本页。</p>
+  </div>
+
+  <footer>本页为数据作品集展示页 · 本地预览：<code>python -m http.server 8000</code></footer>
+
+</div>
+</body>
+</html>

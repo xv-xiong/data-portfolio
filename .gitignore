@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 临时/敏感（如有 token、账号文件不要入库）
+*.env
